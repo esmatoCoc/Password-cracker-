@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Number Generator</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, black, purple);
+            color: white;
+            font-family: Arial;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        #number {
+            font-size: 50px;
+            margin: 30px;
+            color: #d8a4ff;
+            font-weight: bold;
+        }
+
+        button {
+            background: purple;
+            color: white;
+            border: 2px solid white;
+            padding: 15px 40px;
+            font-size: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        button:active {
+            background: #a000ff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Random Number Generator</h1>
+
+    <div id="number">000000</div>
+
+    <button onclick="generate()">RANDOM</button>
+
+    <script>
+        function generate() {
+            let random = Math.floor(Math.random() * 999999) + 1;
+
+            document.getElementById("number").innerText =
+                String(random).padStart(6, "0");
+        }
+    </script>
+
+</body>
+</html>
